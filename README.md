@@ -46,3 +46,16 @@ Después importa el repositorio desde Vercel.
 
 ## Nota SEO
 La estructura técnica ayuda a indexación y relevancia, pero no garantiza posiciones. Para un proyecto real conviene sustituir los datos demo, añadir fotografías propias, casos reales, reseñas, información de empresa y ajustar la estrategia a la competencia y búsquedas de la zona.
+## Actualización SEO local
+
+La navegación incluye ahora una pestaña **Servicios** en `/servicios`, con páginas independientes para búsquedas locales:
+
+- `/servicios/brunch-en-madrid`
+- `/servicios/desayunos-en-madrid`
+- `/servicios/cafe-especialidad`
+- `/servicios/cafe-para-llevar`
+- `/servicios/cafe-filtro-en-madrid`
+
+Cada página incluye `title`, meta description, canonical, Open Graph y Schema.org `Service`. Antes de publicar, sustituye los datos demo por información real de la cafetería (dominio, dirección, horarios, carta, métodos disponibles y demás datos verificables).
+
+El hero también se ha ajustado para mantener una zona limpia de lectura en escritorio, tablet y móvil; las formas decorativas quedan detrás de la zona visual y no invaden el titular.
