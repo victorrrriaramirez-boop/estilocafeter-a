@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: site.url, lastModified: now, changeFrequency: "weekly", priority: 1 },
     { url: `${site.url}/servicios`, lastModified: now, changeFrequency: "monthly", priority: .9 },
+    { url: `${site.url}/carta`, lastModified: now, changeFrequency: "weekly", priority: .85 },
     { url: `${site.url}/contacto`, lastModified: now, changeFrequency: "monthly", priority: .6 },
     ...site.services.map((service) => ({
       url: `${site.url}/servicios/${service.slug}`,

@@ -59,3 +59,11 @@ La navegación incluye ahora una pestaña **Servicios** en `/servicios`, con pá
 Cada página incluye `title`, meta description, canonical, Open Graph y Schema.org `Service`. Antes de publicar, sustituye los datos demo por información real de la cafetería (dominio, dirección, horarios, carta, métodos disponibles y demás datos verificables).
 
 El hero también se ha ajustado para mantener una zona limpia de lectura en escritorio, tablet y móvil; las formas decorativas quedan detrás de la zona visual y no invaden el titular.
+
+
+## Novedades
+
+- Hero corregido para mejorar legibilidad.
+- Nueva página `/carta` con fotos de menú y precios.
+- Nueva navegación con acceso directo a Carta.
+- Fotos integradas localmente en `public/menu`.

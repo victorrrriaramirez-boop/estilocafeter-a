@@ -11,6 +11,7 @@ export default function NavBar() {
       <button className="menu-btn" aria-expanded={open} aria-controls="main-menu" onClick={()=>setOpen(v=>!v)}>Menú</button>
       <div id="main-menu" className={`nav-links ${open ? "open" : ""}`}>
         <Link href="/servicios" onClick={()=>setOpen(false)}>Servicios</Link>
+        <Link href="/carta" onClick={()=>setOpen(false)}>Carta</Link>
         <Link href="/#story" onClick={()=>setOpen(false)}>Proceso</Link>
         <Link href="/#receta" onClick={()=>setOpen(false)}>La receta</Link>
         <Link className="nav-cta" href="/contacto" onClick={()=>setOpen(false)}>Contacto</Link>

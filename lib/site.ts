@@ -1,3 +1,13 @@
+export type MenuItem = {
+  slug: string;
+  title: string;
+  category: string;
+  price: string;
+  image: string;
+  description: string;
+  alt: string;
+};
+
 export type Service = {
   slug: string;
   nav: string;
@@ -62,7 +72,63 @@ export const site = {
       secondary: "En una web real, el contenido debería indicar qué métodos se ofrecen —por ejemplo V60, batch brew o Aeropress— únicamente si forman parte de la carta. También puede incorporar fichas de origen, notas de cata y recomendaciones de preparación.",
       bullets: ["Contenido centrado en métodos de filtro.", "Espacio para explicar origen y notas de cata.", "Enlazado con café de especialidad y brunch.", "Preparado para incorporar métodos reales de la cafetería."]
     }
-  ] as const satisfies readonly Service[]
+  ] as const satisfies readonly Service[],
+  menuItems: [
+    {
+      slug: "cappuccino-bruma",
+      title: "Cappuccino BRUMA",
+      category: "Café de especialidad",
+      price: "2,90 €",
+      image: "/menu/cappuccino.png",
+      description: "Espresso doble, leche texturizada y cacao fino. La taza clásica de la casa para desayunos y media mañana.",
+      alt: "Cappuccino servido en taza cerámica sobre una mesa de cafetería"
+    },
+    {
+      slug: "tostada-aguacate",
+      title: "Tostada de aguacate",
+      category: "Brunch en Madrid",
+      price: "8,90 €",
+      image: "/menu/avocado-toast.png",
+      description: "Pan de masa madre, aguacate aliñado, huevo poché y brotes frescos. Una de las propuestas estrella del brunch.",
+      alt: "Tostada de aguacate con huevo poché y brotes frescos"
+    },
+    {
+      slug: "croissant-artesano",
+      title: "Croissant artesano",
+      category: "Desayunos",
+      price: "3,20 €",
+      image: "/menu/croissant.png",
+      description: "Croissant de mantequilla acompañado de mermelada y mantequilla. Perfecto para un desayuno clásico en Madrid.",
+      alt: "Croissant de mantequilla con mermelada y mantequilla en una mesa de cafetería"
+    },
+    {
+      slug: "iced-latte",
+      title: "Iced Latte",
+      category: "Café para llevar",
+      price: "3,80 €",
+      image: "/menu/iced-latte.png",
+      description: "Leche fría, espresso y hielo. Refrescante, visual y fácil de llevar, ideal para búsquedas de café para llevar en Madrid.",
+      alt: "Iced latte en vaso alto con hielo en una cafetería"
+    },
+    {
+      slug: "pancakes-bruma",
+      title: "Pancakes BRUMA",
+      category: "Brunch en Madrid",
+      price: "9,50 €",
+      image: "/menu/pancakes.png",
+      description: "Tortitas esponjosas con frutos rojos y sirope. Una opción visual y muy reconocible para la carta de brunch.",
+      alt: "Torre de tortitas con frutos rojos y sirope"
+    },
+    {
+      slug: "tarta-queso",
+      title: "Tarta de queso",
+      category: "Postres",
+      price: "5,50 €",
+      image: "/menu/cheesecake.png",
+      description: "Porción de tarta de queso cremosa con frutos rojos. Funciona tanto en mesa como en una carta de meriendas.",
+      alt: "Tarta de queso con coulis de frutos rojos en cafetería"
+    }
+  ] as const satisfies readonly MenuItem[]
 } as const;
 
 export function absoluteUrl(path = "") {
@@ -71,4 +137,11 @@ export function absoluteUrl(path = "") {
 
 export function getService(slug: string) {
   return site.services.find((service) => service.slug === slug);
+}
+
+
+export const menuCategories = [...new Set(site.menuItems.map((item) => item.category))] as readonly string[];
+
+export function getMenuItemsByCategory(category: string) {
+  return site.menuItems.filter((item) => item.category === category);
 }
