@@ -1,4 +1,8 @@
-# BRUMA Café — Next.js + Scrollytelling + SEO
+# BRUMA Café — demo SEO + scrollytelling
+
+**Dirección visual:** Orgánico / sensorial: formas redondeadas, color, notas de cata y narrativa del grano a la taza.
+
+Esta versión incluye dos experiencias de scrollytelling en la Home, responsive y preparada para GitHub/Vercel.
 
 Plantilla demo preparada para GitHub y Vercel. Incluye diseño premium responsive, scrollytelling con Framer Motion y estructura SEO multipágina.
 
